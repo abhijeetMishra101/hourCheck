@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var dayEndLabel: UILabel!
     
-   var dateArray = [Date]()
+   var dateArray = [DateContainer]()
     
    var dateComponents:DateComponents {
         let date = Date.init()
@@ -58,17 +58,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var iterator = noOfRemainingHours
         iterator = iterator! - 1
         
-        dateArray = [Date]()
+        let oldDataArray = dateArray
+        
+        dateArray = [DateContainer]()
         
         while iterator! > 0 {
             let date = getDateObject(indexPathRow: iterator)
-            dateArray.append(date)
+            
+            let oldDateObject = getDateContainer(date: date, array: oldDataArray as NSArray)
+            
+            let dateContainer = DateContainer.init(date: date, enabled: oldDateObject.date != nil ? oldDateObject.enabled : true)
+            
+            dateArray.append(dateContainer)
             iterator = iterator! - 1
         }
     }
     
     func scheduleReminders()  {
-      
+        
         createAllDateObjects()
         
         //remove all previous notifications
@@ -76,12 +83,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         var iterator = 1
         
-        for date in dateArray {
-          //  let delay =  DispatchTimeInterval.milliseconds(iterator * 1000) //iterator * 2.0
-            
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now(), execute: {
-                (UIApplication.shared.delegate as! AppDelegate).scheduleNotification(at: date, message: self.textView.text!)
-            })
+        for dateContainer in dateArray {
+            //  let delay =  DispatchTimeInterval.milliseconds(iterator * 1000) //iterator * 2.0
+            if dateContainer.enabled == true {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now(), execute: {
+                    (UIApplication.shared.delegate as! AppDelegate).scheduleNotification(at: dateContainer.date, message: self.textView.text!)
+                })
+            }
             iterator = iterator + 1
         }
     }
@@ -105,12 +113,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         scheduleReminders()
     }
     
-    
-    @IBAction func startPressed(_ sender: UIButton) {
-//        let selectedDate = Date.init(timeIntervalSinceNow: 60)
-//        let delegate = UIApplication.shared.delegate as! AppDelegate
-//        delegate.scheduleNotification(at: selectedDate, message:textView.text)
-    }
     
     func calculateRemainingHours()  {
         let currentDate = Date.init()
@@ -257,6 +259,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let date = calendar.date(from: newComponents)
         return date!
     }
+   
+    func getDateContainer(date:Date, array:NSArray) -> DateContainer {
+        for dateContainer in array {
+            if (dateContainer as! DateContainer).date == date {
+                return dateContainer as! DateContainer
+            }
+        }
+        return DateContainer.init()
+    }
+    
+    func getDateContainer(date:Date) -> DateContainer {
+       return getDateContainer(date: date, array: dateArray as NSArray)
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let isAM = isAMHour(indexPathRow: indexPath.row)
@@ -274,12 +289,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        if cell?.accessoryType == UITableViewCellAccessoryType.none {
-            cell?.accessoryType = UITableViewCellAccessoryType.checkmark
+        let cell = tableView.cellForRow(at: indexPath) as! ReminderTableViewCell
+    
+        var dateContainer:DateContainer = getDateContainer(date: cell.date)
+        
+        if cell.accessoryType == UITableViewCellAccessoryType.none {
+            cell.accessoryType = UITableViewCellAccessoryType.checkmark
+            dateContainer.enabled = true
         }
         else  {
-            cell?.accessoryType = UITableViewCellAccessoryType.none
+            cell.accessoryType = UITableViewCellAccessoryType.none
+            dateContainer.enabled = false
         }
          scheduleReminders()
     }

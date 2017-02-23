@@ -65,12 +65,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
         
-//        let center = UNUserNotificationCenter.current()
-//        center.getPendingNotificationRequests(completionHandler: { requests in
-//            for request in requests {
-//                print("My request" + String(describing: request))
-//            }
-//        })
+        let center = UNUserNotificationCenter.current()
+        center.getPendingNotificationRequests(completionHandler: { requests in
+            for request in requests {
+                print("My request" + String(describing: request))
+            }
+        })
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
