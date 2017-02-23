@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE19CC0B1E5DED4C00EAFEED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19CC0A1E5DED4C00EAFEED /* AppDelegate.swift */; };
+		EE19CC0D1E5DED4C00EAFEED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19CC0C1E5DED4C00EAFEED /* ViewController.swift */; };
+		EE19CC101E5DED4C00EAFEED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE19CC0E1E5DED4C00EAFEED /* Main.storyboard */; };
+		EE19CC121E5DED4C00EAFEED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE19CC111E5DED4C00EAFEED /* Assets.xcassets */; };
+		EE19CC151E5DED4C00EAFEED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE19CC131E5DED4C00EAFEED /* LaunchScreen.storyboard */; };
+		EE19CC201E5DED4C00EAFEED /* hourCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19CC1F1E5DED4C00EAFEED /* hourCheckTests.swift */; };
+		EE19CC2B1E5DED4C00EAFEED /* hourCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19CC2A1E5DED4C00EAFEED /* hourCheckUITests.swift */; };
+		EE55FD5F1E5EC9ED006AA18B /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = EE55FD5E1E5EC9ED006AA18B /* UITextView+Placeholder.m */; };
+		EE55FD611E5ED774006AA18B /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55FD601E5ED774006AA18B /* ReminderTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE19CC1C1E5DED4C00EAFEED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE19CBFF1E5DED4C00EAFEED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE19CC061E5DED4C00EAFEED;
+			remoteInfo = hourCheck;
+		};
+		EE19CC271E5DED4C00EAFEED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE19CBFF1E5DED4C00EAFEED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE19CC061E5DED4C00EAFEED;
+			remoteInfo = hourCheck;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE19CC071E5DED4C00EAFEED /* hourCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hourCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE19CC0A1E5DED4C00EAFEED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE19CC0C1E5DED4C00EAFEED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE19CC0F1E5DED4C00EAFEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE19CC111E5DED4C00EAFEED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE19CC141E5DED4C00EAFEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE19CC161E5DED4C00EAFEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE19CC1B1E5DED4C00EAFEED /* hourCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hourCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE19CC1F1E5DED4C00EAFEED /* hourCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hourCheckTests.swift; sourceTree = "<group>"; };
+		EE19CC211E5DED4C00EAFEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE19CC261E5DED4C00EAFEED /* hourCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hourCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE19CC2A1E5DED4C00EAFEED /* hourCheckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hourCheckUITests.swift; sourceTree = "<group>"; };
+		EE19CC2C1E5DED4C00EAFEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE55FD5C1E5EC9E3006AA18B /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
+		EE55FD5D1E5EC9ED006AA18B /* hourCheck-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hourCheck-Bridging-Header.h"; sourceTree = "<group>"; };
+		EE55FD5E1E5EC9ED006AA18B /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
+		EE55FD601E5ED774006AA18B /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE19CC041E5DED4C00EAFEED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE19CC181E5DED4C00EAFEED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE19CC231E5DED4C00EAFEED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE19CBFE1E5DED4C00EAFEED = {
+			isa = PBXGroup;
+			children = (
+				EE19CC091E5DED4C00EAFEED /* hourCheck */,
+				EE19CC1E1E5DED4C00EAFEED /* hourCheckTests */,
+				EE19CC291E5DED4C00EAFEED /* hourCheckUITests */,
+				EE19CC081E5DED4C00EAFEED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE19CC081E5DED4C00EAFEED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE19CC071E5DED4C00EAFEED /* hourCheck.app */,
+				EE19CC1B1E5DED4C00EAFEED /* hourCheckTests.xctest */,
+				EE19CC261E5DED4C00EAFEED /* hourCheckUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE19CC091E5DED4C00EAFEED /* hourCheck */ = {
+			isa = PBXGroup;
+			children = (
+				EE55FD5E1E5EC9ED006AA18B /* UITextView+Placeholder.m */,
+				EE55FD5C1E5EC9E3006AA18B /* UITextView+Placeholder.h */,
+				EE19CC0A1E5DED4C00EAFEED /* AppDelegate.swift */,
+				EE19CC0C1E5DED4C00EAFEED /* ViewController.swift */,
+				EE19CC0E1E5DED4C00EAFEED /* Main.storyboard */,
+				EE19CC111E5DED4C00EAFEED /* Assets.xcassets */,
+				EE19CC131E5DED4C00EAFEED /* LaunchScreen.storyboard */,
+				EE19CC161E5DED4C00EAFEED /* Info.plist */,
+				EE55FD5D1E5EC9ED006AA18B /* hourCheck-Bridging-Header.h */,
+				EE55FD601E5ED774006AA18B /* ReminderTableViewCell.swift */,
+			);
+			path = hourCheck;
+			sourceTree = "<group>";
+		};
+		EE19CC1E1E5DED4C00EAFEED /* hourCheckTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE19CC1F1E5DED4C00EAFEED /* hourCheckTests.swift */,
+				EE19CC211E5DED4C00EAFEED /* Info.plist */,
+			);
+			path = hourCheckTests;
+			sourceTree = "<group>";
+		};
+		EE19CC291E5DED4C00EAFEED /* hourCheckUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE19CC2A1E5DED4C00EAFEED /* hourCheckUITests.swift */,
+				EE19CC2C1E5DED4C00EAFEED /* Info.plist */,
+			);
+			path = hourCheckUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE19CC061E5DED4C00EAFEED /* hourCheck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE19CC2F1E5DED4C00EAFEED /* Build configuration list for PBXNativeTarget "hourCheck" */;
+			buildPhases = (
+				EE19CC031E5DED4C00EAFEED /* Sources */,
+				EE19CC041E5DED4C00EAFEED /* Frameworks */,
+				EE19CC051E5DED4C00EAFEED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hourCheck;
+			productName = hourCheck;
+			productReference = EE19CC071E5DED4C00EAFEED /* hourCheck.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE19CC1A1E5DED4C00EAFEED /* hourCheckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE19CC321E5DED4C00EAFEED /* Build configuration list for PBXNativeTarget "hourCheckTests" */;
+			buildPhases = (
+				EE19CC171E5DED4C00EAFEED /* Sources */,
+				EE19CC181E5DED4C00EAFEED /* Frameworks */,
+				EE19CC191E5DED4C00EAFEED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE19CC1D1E5DED4C00EAFEED /* PBXTargetDependency */,
+			);
+			name = hourCheckTests;
+			productName = hourCheckTests;
+			productReference = EE19CC1B1E5DED4C00EAFEED /* hourCheckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE19CC251E5DED4C00EAFEED /* hourCheckUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE19CC351E5DED4C00EAFEED /* Build configuration list for PBXNativeTarget "hourCheckUITests" */;
+			buildPhases = (
+				EE19CC221E5DED4C00EAFEED /* Sources */,
+				EE19CC231E5DED4C00EAFEED /* Frameworks */,
+				EE19CC241E5DED4C00EAFEED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE19CC281E5DED4C00EAFEED /* PBXTargetDependency */,
+			);
+			name = hourCheckUITests;
+			productName = hourCheckUITests;
+			productReference = EE19CC261E5DED4C00EAFEED /* hourCheckUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE19CBFF1E5DED4C00EAFEED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Abhijeet Mishra";
+				TargetAttributes = {
+					EE19CC061E5DED4C00EAFEED = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 7G4HHVAG9A;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					EE19CC1A1E5DED4C00EAFEED = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 7G4HHVAG9A;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE19CC061E5DED4C00EAFEED;
+					};
+					EE19CC251E5DED4C00EAFEED = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 7G4HHVAG9A;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE19CC061E5DED4C00EAFEED;
+					};
+				};
+			};
+			buildConfigurationList = EE19CC021E5DED4C00EAFEED /* Build configuration list for PBXProject "hourCheck" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE19CBFE1E5DED4C00EAFEED;
+			productRefGroup = EE19CC081E5DED4C00EAFEED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE19CC061E5DED4C00EAFEED /* hourCheck */,
+				EE19CC1A1E5DED4C00EAFEED /* hourCheckTests */,
+				EE19CC251E5DED4C00EAFEED /* hourCheckUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE19CC051E5DED4C00EAFEED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE19CC151E5DED4C00EAFEED /* LaunchScreen.storyboard in Resources */,
+				EE19CC121E5DED4C00EAFEED /* Assets.xcassets in Resources */,
+				EE19CC101E5DED4C00EAFEED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE19CC191E5DED4C00EAFEED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE19CC241E5DED4C00EAFEED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE19CC031E5DED4C00EAFEED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE19CC0D1E5DED4C00EAFEED /* ViewController.swift in Sources */,
+				EE55FD5F1E5EC9ED006AA18B /* UITextView+Placeholder.m in Sources */,
+				EE19CC0B1E5DED4C00EAFEED /* AppDelegate.swift in Sources */,
+				EE55FD611E5ED774006AA18B /* ReminderTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE19CC171E5DED4C00EAFEED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE19CC201E5DED4C00EAFEED /* hourCheckTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE19CC221E5DED4C00EAFEED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE19CC2B1E5DED4C00EAFEED /* hourCheckUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE19CC1D1E5DED4C00EAFEED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE19CC061E5DED4C00EAFEED /* hourCheck */;
+			targetProxy = EE19CC1C1E5DED4C00EAFEED /* PBXContainerItemProxy */;
+		};
+		EE19CC281E5DED4C00EAFEED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE19CC061E5DED4C00EAFEED /* hourCheck */;
+			targetProxy = EE19CC271E5DED4C00EAFEED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE19CC0E1E5DED4C00EAFEED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE19CC0F1E5DED4C00EAFEED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE19CC131E5DED4C00EAFEED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE19CC141E5DED4C00EAFEED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE19CC2D1E5DED4C00EAFEED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE19CC2E1E5DED4C00EAFEED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE19CC301E5DED4C00EAFEED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 7G4HHVAG9A;
+				INFOPLIST_FILE = hourCheck/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhijeet.hourCheck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "hourCheck/hourCheck-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EE19CC311E5DED4C00EAFEED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 7G4HHVAG9A;
+				INFOPLIST_FILE = hourCheck/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhijeet.hourCheck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "hourCheck/hourCheck-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EE19CC331E5DED4C00EAFEED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7G4HHVAG9A;
+				INFOPLIST_FILE = hourCheckTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhijeet.hourCheckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hourCheck.app/hourCheck";
+			};
+			name = Debug;
+		};
+		EE19CC341E5DED4C00EAFEED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7G4HHVAG9A;
+				INFOPLIST_FILE = hourCheckTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhijeet.hourCheckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hourCheck.app/hourCheck";
+			};
+			name = Release;
+		};
+		EE19CC361E5DED4C00EAFEED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 7G4HHVAG9A;
+				INFOPLIST_FILE = hourCheckUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhijeet.hourCheckUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = hourCheck;
+			};
+			name = Debug;
+		};
+		EE19CC371E5DED4C00EAFEED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 7G4HHVAG9A;
+				INFOPLIST_FILE = hourCheckUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhijeet.hourCheckUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = hourCheck;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE19CC021E5DED4C00EAFEED /* Build configuration list for PBXProject "hourCheck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE19CC2D1E5DED4C00EAFEED /* Debug */,
+				EE19CC2E1E5DED4C00EAFEED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE19CC2F1E5DED4C00EAFEED /* Build configuration list for PBXNativeTarget "hourCheck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE19CC301E5DED4C00EAFEED /* Debug */,
+				EE19CC311E5DED4C00EAFEED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE19CC321E5DED4C00EAFEED /* Build configuration list for PBXNativeTarget "hourCheckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE19CC331E5DED4C00EAFEED /* Debug */,
+				EE19CC341E5DED4C00EAFEED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE19CC351E5DED4C00EAFEED /* Build configuration list for PBXNativeTarget "hourCheckUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE19CC361E5DED4C00EAFEED /* Debug */,
+				EE19CC371E5DED4C00EAFEED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE19CBFF1E5DED4C00EAFEED /* Project object */;
+}

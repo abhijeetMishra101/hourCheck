@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kf1-O5-YE3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--hourCheck-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hourCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODY-mG-xR1" userLabel="Day Start Slider View">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="0.0" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="meE-h3-aNO">
+                                        <rect key="frame" x="128" y="7" width="118" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="114" id="Znu-1H-1QV"/>
+                                        </constraints>
+                                        <color key="minimumTrackTintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="maximumTrackTintColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="startTimeChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jkq-Lo-a96"/>
+                                            <action selector="startTimeValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="IW0-1j-h16"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day Start:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZU-K0-Kag" userLabel="Morning Label">
+                                        <rect key="frame" x="28.5" y="12" width="76.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gH1-HI-wXe">
+                                        <rect key="frame" x="270" y="12" width="76.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="meE-h3-aNO" firstAttribute="centerY" secondItem="ODY-mG-xR1" secondAttribute="centerY" id="JYY-Kr-Khf"/>
+                                    <constraint firstItem="meE-h3-aNO" firstAttribute="leading" secondItem="SZU-K0-Kag" secondAttribute="trailing" constant="25" id="KAB-Wb-9zh"/>
+                                    <constraint firstAttribute="height" constant="44" id="Oig-qH-Ie9"/>
+                                    <constraint firstItem="gH1-HI-wXe" firstAttribute="centerY" secondItem="meE-h3-aNO" secondAttribute="centerY" id="XT2-2T-bip"/>
+                                    <constraint firstItem="meE-h3-aNO" firstAttribute="centerX" secondItem="ODY-mG-xR1" secondAttribute="centerX" id="aUr-P8-KFh"/>
+                                    <constraint firstItem="SZU-K0-Kag" firstAttribute="centerY" secondItem="meE-h3-aNO" secondAttribute="centerY" id="bcT-tS-2gQ"/>
+                                    <constraint firstItem="gH1-HI-wXe" firstAttribute="leading" secondItem="meE-h3-aNO" secondAttribute="trailing" constant="26" id="jqW-Sj-tR7"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLJ-VG-hXo" userLabel="Day End Slider View">
+                                <rect key="frame" x="0.0" y="108" width="375" height="44"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="0.0" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="e7X-RR-ndq">
+                                        <rect key="frame" x="128" y="7" width="118" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="114" id="cZM-c7-eW4"/>
+                                        </constraints>
+                                        <color key="minimumTrackTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="maximumTrackTintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="endTimeChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jCl-B2-tP7"/>
+                                            <action selector="endTimeValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="7v9-9T-Rhn"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day End:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pl4-um-End" userLabel="Morning Label">
+                                        <rect key="frame" x="37" y="12" width="68" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0m0-re-FwM">
+                                        <rect key="frame" x="270" y="12" width="75.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="e7X-RR-ndq" firstAttribute="centerX" secondItem="PLJ-VG-hXo" secondAttribute="centerX" id="1x0-kq-he4"/>
+                                    <constraint firstItem="pl4-um-End" firstAttribute="centerY" secondItem="e7X-RR-ndq" secondAttribute="centerY" id="GHd-9s-Ufk"/>
+                                    <constraint firstAttribute="height" constant="44" id="P2U-En-owq"/>
+                                    <constraint firstItem="0m0-re-FwM" firstAttribute="centerY" secondItem="e7X-RR-ndq" secondAttribute="centerY" id="Qrw-NE-kjq"/>
+                                    <constraint firstItem="0m0-re-FwM" firstAttribute="leading" secondItem="e7X-RR-ndq" secondAttribute="trailing" constant="26" id="SwN-7t-cu0"/>
+                                    <constraint firstItem="e7X-RR-ndq" firstAttribute="leading" secondItem="pl4-um-End" secondAttribute="trailing" constant="25" id="dWl-tx-fwm"/>
+                                    <constraint firstItem="e7X-RR-ndq" firstAttribute="centerY" secondItem="PLJ-VG-hXo" secondAttribute="centerY" id="eeb-te-KEB"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="My Day Reminder" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V8u-SA-Hsw">
+                                <rect key="frame" x="0.0" y="152" width="375" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="SMk-LP-c6K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vkw-In-buX">
+                                <rect key="frame" x="0.0" y="280" width="375" height="387"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="UdO-cg-T54" customClass="ReminderTableViewCell" customModule="hourCheck" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UdO-cg-T54" id="HIM-fU-Zuw">
+                                            <rect key="frame" x="0.0" y="0.0" width="336" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="506-KO-Uhx"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pfU-4G-eAI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PLJ-VG-hXo" firstAttribute="top" secondItem="ODY-mG-xR1" secondAttribute="bottom" id="1O5-Eb-VYr"/>
+                            <constraint firstAttribute="trailing" secondItem="Vkw-In-buX" secondAttribute="trailing" id="3Lp-iv-8oq"/>
+                            <constraint firstItem="V8u-SA-Hsw" firstAttribute="leading" secondItem="ODY-mG-xR1" secondAttribute="leading" id="3fW-jx-2Qx"/>
+                            <constraint firstItem="V8u-SA-Hsw" firstAttribute="top" secondItem="PLJ-VG-hXo" secondAttribute="bottom" id="LL2-dc-3gw"/>
+                            <constraint firstItem="Vkw-In-buX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VPz-o5-2lo"/>
+                            <constraint firstItem="PLJ-VG-hXo" firstAttribute="leading" secondItem="ODY-mG-xR1" secondAttribute="leading" id="j6R-L1-B3K"/>
+                            <constraint firstAttribute="trailing" secondItem="ODY-mG-xR1" secondAttribute="trailing" id="lH3-xU-Rnm"/>
+                            <constraint firstItem="Vkw-In-buX" firstAttribute="top" secondItem="V8u-SA-Hsw" secondAttribute="bottom" id="lsX-Kj-8bq"/>
+                            <constraint firstItem="ODY-mG-xR1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="onl-6s-SQw"/>
+                            <constraint firstItem="V8u-SA-Hsw" firstAttribute="trailing" secondItem="ODY-mG-xR1" secondAttribute="trailing" id="q5l-5Q-Wuv"/>
+                            <constraint firstItem="PLJ-VG-hXo" firstAttribute="trailing" secondItem="ODY-mG-xR1" secondAttribute="trailing" id="qik-Dg-Tax"/>
+                            <constraint firstAttribute="bottom" secondItem="Vkw-In-buX" secondAttribute="bottom" id="uLE-bg-Yp7"/>
+                            <constraint firstItem="ODY-mG-xR1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uuC-7g-DYY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="hourCheck" id="Wgq-Pa-h2I"/>
+                    <connections>
+                        <outlet property="dayEndLabel" destination="0m0-re-FwM" id="ObQ-Ez-n1A"/>
+                        <outlet property="dayStartLabel" destination="gH1-HI-wXe" id="OBj-2x-xg9"/>
+                        <outlet property="endTimeSlider" destination="e7X-RR-ndq" id="phf-z9-Nbp"/>
+                        <outlet property="startTimeSlider" destination="meE-h3-aNO" id="ehn-jv-5gz"/>
+                        <outlet property="tableView" destination="Vkw-In-buX" id="bXJ-eo-lzh"/>
+                        <outlet property="textView" destination="V8u-SA-Hsw" id="Rcc-7X-K44"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1004" y="37.331334332833585"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zhi-Ga-vIF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kf1-O5-YE3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Qy-8r-ZZV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fvg-EF-e8g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y1e-8X-pk6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39.200000000000003" y="691.304347826087"/>
+        </scene>
+    </scenes>
+</document>
