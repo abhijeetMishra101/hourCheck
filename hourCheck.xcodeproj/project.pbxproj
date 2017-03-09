@@ -14,8 +14,11 @@
 		EE19CC151E5DED4C00EAFEED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE19CC131E5DED4C00EAFEED /* LaunchScreen.storyboard */; };
 		EE19CC201E5DED4C00EAFEED /* hourCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19CC1F1E5DED4C00EAFEED /* hourCheckTests.swift */; };
 		EE19CC2B1E5DED4C00EAFEED /* hourCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19CC2A1E5DED4C00EAFEED /* hourCheckUITests.swift */; };
+		EE4BE34E1E60759D0086FD5A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4BE34D1E60759D0086FD5A /* NotificationService.swift */; };
+		EE4BE3521E60759D0086FD5A /* hourCheckNotification.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EE4BE34B1E60759D0086FD5A /* hourCheckNotification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EE55FD5F1E5EC9ED006AA18B /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = EE55FD5E1E5EC9ED006AA18B /* UITextView+Placeholder.m */; };
 		EE55FD611E5ED774006AA18B /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55FD601E5ED774006AA18B /* ReminderTableViewCell.swift */; };
+		EE70254F1E6031770000968D /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = EE70254E1E6031770000968D /* clock.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +36,28 @@
 			remoteGlobalIDString = EE19CC061E5DED4C00EAFEED;
 			remoteInfo = hourCheck;
 		};
+		EE4BE3501E60759D0086FD5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE19CBFF1E5DED4C00EAFEED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE4BE34A1E60759D0086FD5A;
+			remoteInfo = hourCheckNotification;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EE4BE3561E60759D0086FD5A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EE4BE3521E60759D0086FD5A /* hourCheckNotification.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EE19CC071E5DED4C00EAFEED /* hourCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hourCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,10 +73,14 @@
 		EE19CC261E5DED4C00EAFEED /* hourCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hourCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE19CC2A1E5DED4C00EAFEED /* hourCheckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hourCheckUITests.swift; sourceTree = "<group>"; };
 		EE19CC2C1E5DED4C00EAFEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE4BE34B1E60759D0086FD5A /* hourCheckNotification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = hourCheckNotification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4BE34D1E60759D0086FD5A /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		EE4BE34F1E60759D0086FD5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE55FD5C1E5EC9E3006AA18B /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
 		EE55FD5D1E5EC9ED006AA18B /* hourCheck-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hourCheck-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE55FD5E1E5EC9ED006AA18B /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
 		EE55FD601E5ED774006AA18B /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
+		EE70254E1E6031770000968D /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +105,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EE4BE3481E60759D0086FD5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -86,6 +121,7 @@
 				EE19CC091E5DED4C00EAFEED /* hourCheck */,
 				EE19CC1E1E5DED4C00EAFEED /* hourCheckTests */,
 				EE19CC291E5DED4C00EAFEED /* hourCheckUITests */,
+				EE4BE34C1E60759D0086FD5A /* hourCheckNotification */,
 				EE19CC081E5DED4C00EAFEED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +132,7 @@
 				EE19CC071E5DED4C00EAFEED /* hourCheck.app */,
 				EE19CC1B1E5DED4C00EAFEED /* hourCheckTests.xctest */,
 				EE19CC261E5DED4C00EAFEED /* hourCheckUITests.xctest */,
+				EE4BE34B1E60759D0086FD5A /* hourCheckNotification.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +147,7 @@
 				EE19CC0E1E5DED4C00EAFEED /* Main.storyboard */,
 				EE19CC111E5DED4C00EAFEED /* Assets.xcassets */,
 				EE19CC131E5DED4C00EAFEED /* LaunchScreen.storyboard */,
+				EE70254E1E6031770000968D /* clock.png */,
 				EE19CC161E5DED4C00EAFEED /* Info.plist */,
 				EE55FD5D1E5EC9ED006AA18B /* hourCheck-Bridging-Header.h */,
 				EE55FD601E5ED774006AA18B /* ReminderTableViewCell.swift */,
@@ -135,6 +173,15 @@
 			path = hourCheckUITests;
 			sourceTree = "<group>";
 		};
+		EE4BE34C1E60759D0086FD5A /* hourCheckNotification */ = {
+			isa = PBXGroup;
+			children = (
+				EE4BE34D1E60759D0086FD5A /* NotificationService.swift */,
+				EE4BE34F1E60759D0086FD5A /* Info.plist */,
+			);
+			path = hourCheckNotification;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,10 +192,12 @@
 				EE19CC031E5DED4C00EAFEED /* Sources */,
 				EE19CC041E5DED4C00EAFEED /* Frameworks */,
 				EE19CC051E5DED4C00EAFEED /* Resources */,
+				EE4BE3561E60759D0086FD5A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EE4BE3511E60759D0086FD5A /* PBXTargetDependency */,
 			);
 			name = hourCheck;
 			productName = hourCheck;
@@ -191,6 +240,23 @@
 			productReference = EE19CC261E5DED4C00EAFEED /* hourCheckUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		EE4BE34A1E60759D0086FD5A /* hourCheckNotification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE4BE3551E60759D0086FD5A /* Build configuration list for PBXNativeTarget "hourCheckNotification" */;
+			buildPhases = (
+				EE4BE3471E60759D0086FD5A /* Sources */,
+				EE4BE3481E60759D0086FD5A /* Frameworks */,
+				EE4BE3491E60759D0086FD5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hourCheckNotification;
+			productName = hourCheckNotification;
+			productReference = EE4BE34B1E60759D0086FD5A /* hourCheckNotification.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -219,6 +285,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = EE19CC061E5DED4C00EAFEED;
 					};
+					EE4BE34A1E60759D0086FD5A = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 7G4HHVAG9A;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = EE19CC021E5DED4C00EAFEED /* Build configuration list for PBXProject "hourCheck" */;
@@ -237,6 +308,7 @@
 				EE19CC061E5DED4C00EAFEED /* hourCheck */,
 				EE19CC1A1E5DED4C00EAFEED /* hourCheckTests */,
 				EE19CC251E5DED4C00EAFEED /* hourCheckUITests */,
+				EE4BE34A1E60759D0086FD5A /* hourCheckNotification */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE70254F1E6031770000968D /* clock.png in Resources */,
 				EE19CC151E5DED4C00EAFEED /* LaunchScreen.storyboard in Resources */,
 				EE19CC121E5DED4C00EAFEED /* Assets.xcassets in Resources */,
 				EE19CC101E5DED4C00EAFEED /* Main.storyboard in Resources */,
@@ -260,6 +333,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EE19CC241E5DED4C00EAFEED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4BE3491E60759D0086FD5A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -296,6 +376,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EE4BE3471E60759D0086FD5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE4BE34E1E60759D0086FD5A /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -308,6 +396,11 @@
 			isa = PBXTargetDependency;
 			target = EE19CC061E5DED4C00EAFEED /* hourCheck */;
 			targetProxy = EE19CC271E5DED4C00EAFEED /* PBXContainerItemProxy */;
+		};
+		EE4BE3511E60759D0086FD5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE4BE34A1E60759D0086FD5A /* hourCheckNotification */;
+			targetProxy = EE4BE3501E60759D0086FD5A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -425,6 +518,7 @@
 		EE19CC301E5DED4C00EAFEED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7G4HHVAG9A;
@@ -442,6 +536,7 @@
 		EE19CC311E5DED4C00EAFEED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7G4HHVAG9A;
@@ -513,6 +608,32 @@
 			};
 			name = Release;
 		};
+		EE4BE3531E60759D0086FD5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7G4HHVAG9A;
+				INFOPLIST_FILE = hourCheckNotification/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhijeet.hourCheck.hourCheckNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EE4BE3541E60759D0086FD5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7G4HHVAG9A;
+				INFOPLIST_FILE = hourCheckNotification/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhijeet.hourCheck.hourCheckNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -551,6 +672,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EE4BE3551E60759D0086FD5A /* Build configuration list for PBXNativeTarget "hourCheckNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4BE3531E60759D0086FD5A /* Debug */,
+				EE4BE3541E60759D0086FD5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,8 +9,12 @@
 import UIKit
 import UserNotifications
 
+enum NotificationAction:String {
+    case ShowMe = "showMe"
+}
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
@@ -21,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func scheduleNotification (at date:Date, message:String)  {
 
+        UNUserNotificationCenter.current().delegate = self
         let calendar = Calendar(identifier: .gregorian)
         let components = calendar.dateComponents(in: .current, from: date)
         let newComponents = DateComponents(calendar: calendar, timeZone: .current, month: components.month, day: components.day, hour: components.hour, minute: components.minute)
@@ -32,6 +37,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         content.body = message
         content.sound = UNNotificationSound.default()
         
+        //attaching the image
+        if let path = Bundle.main.path(forResource: "clock", ofType: "png") {
+            let url = URL.init(fileURLWithPath: path)
+            
+            do {
+                let attachment = try UNNotificationAttachment.init(identifier: "clock", url: url, options: nil)
+                content.attachments = [attachment]
+            } catch  {
+                print("attachment loading failed")
+            }
+        }
+        
         let request = UNNotificationRequest(identifier:String(describing: date), content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request) {(error) in
@@ -39,6 +56,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Uh oh! We had an error: \(error)")
             }
         }        
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        switch response.actionIdentifier {
+        case NotificationAction.ShowMe.rawValue:
+            //TODO:: Handle showMe notification
+           print("showMe notification received")
+            break
+        default: break
+            
+        }
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -49,6 +81,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("No access given")
             }
         }
+        //add action
+        let showMeAction = UNNotificationAction.init(identifier: NotificationAction.ShowMe.rawValue, title: "Show Me", options: UNNotificationActionOptions.authenticationRequired)
+        let showMeCatogry = UNNotificationCategory.init(identifier: NotificationAction.ShowMe.rawValue, actions: [showMeAction], intentIdentifiers: [], options: UNNotificationCategoryOptions.customDismissAction)
+        UNUserNotificationCenter.current().setNotificationCategories([showMeCatogry])
+        
         return true
     }
 
